@@ -3,8 +3,10 @@ var appEntra21 = angular.module("appEntra21", ['ngRoute']);
 appEntra21.config(function($routeProvider, $locationProvider){
     
 	$routeProvider
-    .when("/chamados",{templateUrl:'view/chamado.html', controller:'chamadoController'})
+    .when("/chamados",{templateUrl:'view/chamado.html', controller:'chamadoController'})    
     .when("/chamados/:id",{templateUrl:'view/chamado-detalhe.html', controller:'chamadoDetalheController'})
+    .when("/chamado-listar",{templateUrl:'view/chamado-listar.html', controller:'chamadoController'})
+    .when("/add",{templateUrl:'view/add.html', controller:'chamadoDetalheController'})
     .when("/usuario",{templateUrl:'view/usuario.html', controller:'usuarioController'})
     .otherwise({redirectTo:'/'});
 	
